@@ -6,11 +6,11 @@ A Java application that implements a set of requested operations and their corre
 * MyFileUtilitiesTest is a test class for MyFileUtilities.
 * MyArrayOperationsTest is a test class for MyArrayOperations.
 
-#How it works?
+# How it works?
 
 ## Get the code ##
-*First you have to fork the repository.
-*Copy the url of the forked repository and clone it locally.
+* First you have to fork the repository.
+* Copy the url of the forked repository and clone it locally.
 
 ## Run the tests ##
 
