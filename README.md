@@ -18,6 +18,6 @@ A Java application that implements a set of requested operations and their corre
 Go to the package explorer and choose the test class you want to run (all test classes can be found on the unit_testing/src/test/java/dmst/seip/Argyro_Sioziou/unit_testing path). Right click on the test you want to execute, "Run as" "JUnit Test". In order to run all the tests together do the same thing by right clicking on the unit_testing folder. 
 
 ### Terminal ### 
-Change directory and go to the unit_testing folder. To test all classes right the "mvn test" command. To test a specific test class right the "mvn -Dtest=classYouWantToTest test" command and don't forget to replace the classYouWantToTest with the name of the class to be tested. 
+Change directory and go to the unit_testing folder. To test all classes write the "mvn test" command. To test a specific test class write the "mvn -Dtest=classYouWantToTest test" command and don't forget to replace the classYouWantToTest with the name of the class to be tested. 
 
 Feel free to change the grades from the grades file inside the resources folder and create your own test cases.
