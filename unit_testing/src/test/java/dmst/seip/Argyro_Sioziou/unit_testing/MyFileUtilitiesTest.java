@@ -31,7 +31,7 @@ public class MyFileUtilitiesTest {
 	@Before
 	public void initializeArray() {
 		
-		array = new int[] {5, 10, 2, 3, 4, 6, 3, 1, 7};
+		array = new int[] {5, 10, 2, 3, 1, 4, 6, 3, 1, 7, 4};
 		
 	}
 	

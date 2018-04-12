@@ -30,7 +30,7 @@ public class MyArrayOperationsTest {
 	@Before
 	public void initializeArray() {
 		
-		array = new int[] {5, 10, 2, 3, 4, 6, 3, 1, 7};
+		array = new int[] { 0, 2, 1, 2, 2, 1, 1, 1, 0, 0, 1};
 		
 	}
 	
@@ -49,7 +49,7 @@ public class MyArrayOperationsTest {
 		
 		MyFileUtilities mfu = mock(MyFileUtilities.class);
 		
-		when(mfu.readFile("src/test/recourses/grades")).thenReturn(array);
+		when(mfu.readFile("src/test/recourses/grades")).thenReturn(new int[] {5, 10, 2, 3, 1, 4, 6, 3, 1, 7, 4});
 		
 		Assert.assertArrayEquals(array, mao.gradeFrequencies("src/test/recourses/grades", mfu));
 		
