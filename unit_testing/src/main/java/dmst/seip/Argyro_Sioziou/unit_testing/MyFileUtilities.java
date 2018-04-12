@@ -82,28 +82,6 @@ public class MyFileUtilities {
 		}  catch (IOException e) {
 
 			throw new IllegalArgumentException("Error while reading the file");
-
-		} finally {
-			
-			try {
-				
-				//Checking if fileReader is closed
-				if(fileReader != null) {
-				
-					fileReader.close();
-				
-				}
-				
-				//Checking if bufferedReader is closed
-				if(bufferedReader != null) {
-					
-					bufferedReader.close();
-				}
-				
-			} catch (IOException e) {
-				
-				e.printStackTrace();
-			}
 			
 		}
 		

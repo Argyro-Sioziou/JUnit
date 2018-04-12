@@ -59,7 +59,7 @@ public class MyMath {
 			
 		} else {
 			
-			return number*(-1);
+			return -number;
 		}
 	}
 
