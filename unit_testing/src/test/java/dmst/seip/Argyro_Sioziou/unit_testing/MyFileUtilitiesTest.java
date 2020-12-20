@@ -9,30 +9,30 @@ package dmst.seip.Argyro_Sioziou.unit_testing;
 * @version 1.0
 * @since   2018-04-11 
 */
-
+import org.junit.BeforeClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.Rule;
-import org.junit.Assert;
+import static org.junit.Assert.*;
 
 public class MyFileUtilitiesTest {
 	
 	//Declaring the expected array
 	int array[];
 	//Creating a MyFileUtilities object
-	MyFileUtilities  mfu = new MyFileUtilities();
+	MyFileUtilities  mfu ;
 	
 	/*
 	 * Initializes the integer
 	 * array, assigning it the
 	 * expected values. 
 	 */
-	@Before
-	public void initializeArray() {
+	@BeforeClass
+	public static void setup(){
 		
 		array = new int[] {5, 10, 2, 3, 1, 4, 6, 3, 1, 7, 4};
-		
+		mfu = new MyFileUtilities();
 	}
 	
 	/*
@@ -45,7 +45,7 @@ public class MyFileUtilitiesTest {
 	@Test
 	public void normal_case() {
 		
-		Assert.assertArrayEquals(array, mfu.readFile("src/test/resources/grades"));
+		assertArrayEquals(array, mfu.readFile("src/test/resources/grades"));
 		
 	}
 	
