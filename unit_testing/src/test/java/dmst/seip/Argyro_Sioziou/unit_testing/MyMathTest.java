@@ -12,7 +12,7 @@ package dmst.seip.Argyro_Sioziou.unit_testing;
 */
 
 import org.junit.Test;
-import org.junit.Assert;
+import static org.junit.Assert;
 
 public class MyMathTest {
 	
@@ -29,7 +29,7 @@ public class MyMathTest {
 	@Test
 	public void test_integer_result() {
 		
-		Assert.assertEquals(2, myMath.divide(10, 5), 0.1);
+		assertEquals(2, myMath.divide(10, 5), 0.1);
 		
 	}
 	
@@ -43,7 +43,7 @@ public class MyMathTest {
 	@Test 
 	public void test_double_result() {
 		
-		Assert.assertEquals(3.64, myMath.divide(80, 22), 0.1);
+		assertEquals(3.64, myMath.divide(80, 22), 0.1);
 		
 	}
 	
@@ -57,7 +57,7 @@ public class MyMathTest {
 	@Test 
 	public void test_zero_numerator() {
 		
-		Assert.assertEquals(0, myMath.divide(0, 5), 0);
+		assertEquals(0, myMath.divide(0, 5), 0);
 		
 	}
 	
@@ -72,7 +72,7 @@ public class MyMathTest {
 	@Test
 	public void test_negative_numerator() {
 		
-		Assert.assertEquals(-1, myMath.divide(-5, 5), 0.1);
+		assertEquals(-1, myMath.divide(-5, 5), 0.1);
 		
 	}
 	
@@ -87,7 +87,7 @@ public class MyMathTest {
 	@Test
 	public void test_negative_denominator() {
 		
-		Assert.assertEquals(-1, myMath.divide(5, -5), 0.1);
+		assertEquals(-1, myMath.divide(5, -5), 0.1);
 		
 	}
 	
@@ -102,7 +102,7 @@ public class MyMathTest {
 	@Test
 	public void test_negative_both() {
 		
-		Assert.assertEquals(1, myMath.divide(-5, -5), 0.1);
+		assertEquals(1, myMath.divide(-5, -5), 0.1);
 		
 	}
 	
