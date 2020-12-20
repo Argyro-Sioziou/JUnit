@@ -15,25 +15,26 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import org.junit.Test;
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 import org.junit.Assert;
+import org.junit.experimental.theories.DataPoints;
+import org.junit.experimental.theories.Theories;
+import org.junit.experimental.theories.Theory;
 
-@RunWith(Parameterized.class)
+@RunWith(Theories.class)
 public class MyMathTest_ReverseNumber_Parameterized {
-
-	//Setting the first parameter's value
-	@Parameter (value = 0)
-	public int number;
-	
-	//Setting the second parameter's value
-	@Parameter (value = 1)
-	public int opposite;
 	
 	//Creating a MyMath object
-	MyMath mm = new MyMath();
+	MyMath mm ;
+	
+	@BeforeClass
+	public static void setup(){
+		mm = new MyMath();
+	}
 	
 	/*
 	 * Creates couples, each
@@ -41,11 +42,9 @@ public class MyMathTest_ReverseNumber_Parameterized {
 	 * and the expected output 
 	 * value.
 	 */
-	@Parameters 
-	public static Collection<Object[]> data() {
-		Object[][] data = new Object[][] {{1, -1}, {-2, 2}, {0, 0}, {Integer.MAX_VALUE, -Integer.MAX_VALUE}};
-		
-		return Arrays.asList(data);
+	@DataPoints 
+	public static int[] data() {
+		return new int[]{1,-2,0,Integer.MAX_VALUE};
 	}
 	
 	/*
@@ -55,10 +54,10 @@ public class MyMathTest_ReverseNumber_Parameterized {
 	 * returns the correct
 	 * output.
 	 */
-	@Test
-	public void test_reverseNumber() {
+	@Theory
+	public void test_reverseNumber(int number) {
 		
-		Assert.assertEquals(opposite, mm.reverseNumber(number));
+		Assert.assertEquals(-number, mm.reverseNumber(number));
 		
 	}
 	
